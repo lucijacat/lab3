@@ -121,11 +121,11 @@ class Star {
     }
 
     Update() {
+        // mijenjaje pozicije zvijezda
         let radians = this.angle / Math.PI * 180;
         this.x += Math.cos(radians) * this.speed;
         this.y += Math.sin(radians) * this.speed;
 
-        // Handle wrapping for stars
         if (this.x < 0 || this.x > canvasWidth || this.y < 0 || this.y > canvasHeight) {
             this.x = Math.floor(Math.random() * canvasWidth);
             this.y = Math.floor(Math.random() * canvasHeight);
